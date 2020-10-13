@@ -1,11 +1,12 @@
 import React from "react";
 import "../styles/App.css";
+import NavBar from './NavBar';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <body>
-        <h2>Surreal Estate</h2>
+        <NavBar />
       </body>
     </div>
   );
