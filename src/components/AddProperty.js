@@ -74,7 +74,7 @@ const AddProperty = () => {
         </label>
         <label htmlFor="price">
           Price £
-          <input id="price" name="price" value={fields.price} onChange={handleFieldChange} type="number" className="input-price" placeholder="25000" />
+          <input id="price" name="price" value={fields.price} onChange={handleFieldChange} type="number" className="input-price" placeholder="25000" min="1" max="999999" />
         </label>
         <label htmlFor="email">
           Email
