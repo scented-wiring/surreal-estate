@@ -8,13 +8,11 @@ import {Switch, Route} from 'react-router-dom';
 const App = () => {
   return (
     <div className="App">
-      <body>
         <NavBar />
         <Switch>
           <Route exact path="/" component={Properties}/>
           <Route exact path="/add-property" component={AddProperty} />
         </Switch>
-      </body>
     </div>
   );
 }

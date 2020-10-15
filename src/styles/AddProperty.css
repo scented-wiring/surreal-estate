@@ -1,4 +1,42 @@
-.add-property {
+.AddProperty {
   margin-left: 19px;
   margin-top: 8px;
+}
+
+.input-title {
+  width: 200px;
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+.input-city {
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+.select-type {
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+.select-bedrooms {
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+.select-bathrooms {
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+.input-price {
+  width: 60px;
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+.input-email {
+  width: 230px;
+  margin-left: 5px;
+  margin-right: 12px;
 }
