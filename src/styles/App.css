@@ -3,7 +3,7 @@
 .App {
   font-family: "Noto Sans JP", sans-serif;
   margin: 0;
-  padding: 0;
-  background: lightgray;
+  color: #12100e;
+  background-color: white;
   padding-bottom: 15px;
 }

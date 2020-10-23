@@ -1,40 +1,76 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import Alert from "../components/Alert";
 import "../styles/AddProperty.css";
+import axios from "axios";
 
 const AddProperty = () => {
   const initialState = {
     fields: {
-      title: '',
-      city: 'Manchester',
-      type: 'Flat',
-      bedrooms: '',
-      bathroomss: '',
-      price: '',
-      email: ''
-    }
-  }
+      title: "",
+      city: "Manchester",
+      type: "Flat",
+      bedrooms: "",
+      bathroomss: "",
+      price: "",
+      email: "",
+    },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
+  };
 
   const [fields, setFields] = useState(initialState.fields);
 
+  const [alert, setAlert] = useState(initialState.alert);
+
   const handleAddProperty = (event) => {
     event.preventDefault();
-    console.log(fields);
-  }
+    setAlert({ message: "", isSuccess: false });
+    axios
+      .post("http://localhost:4000/api/v1/PropertyListing", { ...fields })
+      .then(() =>
+        setAlert({
+          message: "Property Added",
+          isSuccess: true,
+        })
+      )
+      .catch(() => {
+        setAlert({
+          message: "Server error. Please try again later.",
+          isSuccess: false,
+        });
+      });
+  };
 
   const handleFieldChange = (event) => {
-    setFields({...fields, [event.target.name]: event.target.value });
-  }
+    setFields({ ...fields, [event.target.name]: event.target.value });
+  };
 
   return (
     <div className="AddProperty">
       <form onSubmit={handleAddProperty}>
-        <label htmlFor='title'>
+        <Alert message={alert.message} success={alert.isSuccess} />
+        <label htmlFor="title">
           Title
-          <input id="title" name="title" value={fields.title} onChange={handleFieldChange} placeholder="2 bed flat" className="input-title" />
+          <input
+            id="title"
+            name="title"
+            value={fields.title}
+            onChange={handleFieldChange}
+            placeholder="2 bed flat"
+            className="input-title"
+          />
         </label>
         <label htmlFor="city">
           City
-          <select id="city" name="city" value={fields.city} onChange={handleFieldChange} className="input-city">
+          <select
+            id="city"
+            name="city"
+            value={fields.city}
+            onChange={handleFieldChange}
+            className="input-city"
+          >
             <option value="Manchester">Manchester</option>
             <option value="Leeds">Leeds</option>
             <option value="Sheffield">Sheffield</option>
@@ -43,7 +79,13 @@ const AddProperty = () => {
         </label>
         <label htmlFor="type">
           Type
-          <select id="type" name="type" value={fields.type} onChange={handleFieldChange} className="select-type">
+          <select
+            id="type"
+            name="type"
+            value={fields.type}
+            onChange={handleFieldChange}
+            className="select-type"
+          >
             <option value="Flat">Flat</option>
             <option value="Detached">Detached</option>
             <option value="Semi-Detached">Semi-Detached</option>
@@ -54,7 +96,13 @@ const AddProperty = () => {
         </label>
         <label htmlFor="bedrooms">
           Bedrooms
-          <select id="bedrooms" name="bedrooms" value={fields.bedrooms} onChange={handleFieldChange} className="select-bedrooms">
+          <select
+            id="bedrooms"
+            name="bedrooms"
+            value={fields.bedrooms}
+            onChange={handleFieldChange}
+            className="select-bedrooms"
+          >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -64,7 +112,14 @@ const AddProperty = () => {
         </label>
         <label htmlFor="bathrooms">
           Bathrooms
-          <select id="bathrooms" name="bathrooms" value={fields.bathrooms} onChange={handleFieldChange} type="number" className="select-bathrooms" >
+          <select
+            id="bathrooms"
+            name="bathrooms"
+            value={fields.bathrooms}
+            onChange={handleFieldChange}
+            type="number"
+            className="select-bathrooms"
+          >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -74,16 +129,36 @@ const AddProperty = () => {
         </label>
         <label htmlFor="price">
           Price £
-          <input id="price" name="price" value={fields.price} onChange={handleFieldChange} type="number" className="input-price" placeholder="25000" min="1" max="999999" />
+          <input
+            id="price"
+            name="price"
+            value={fields.price}
+            onChange={handleFieldChange}
+            type="number"
+            className="input-price"
+            placeholder="25000"
+            min="1"
+            max="999999"
+          />
         </label>
         <label htmlFor="email">
           Email
-          <input id="email" name="email" value={fields.email} onChange={handleFieldChange} type="email" placeholder="example@email.com" className="input-email" />
+          <input
+            id="email"
+            name="email"
+            value={fields.email}
+            onChange={handleFieldChange}
+            type="email"
+            placeholder="example@email.com"
+            className="input-email"
+          />
         </label>
-        <button type="submit">Add</button>
+        <button type="submit" className="add-button">
+          Add
+        </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default AddProperty;

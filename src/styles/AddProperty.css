@@ -1,6 +1,12 @@
 .AddProperty {
   margin-left: 19px;
+  margin-right: 19px;
   margin-top: 8px;
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  display: grid;
+  background-color: lightgray;
+  padding: 15px;
 }
 
 .input-title {
@@ -39,4 +45,20 @@
   width: 230px;
   margin-left: 5px;
   margin-right: 12px;
+}
+
+.add-button {
+  width: 60px;
+  color: #fff !important;
+  background: purple;
+  padding: 3px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.add-button:hover {
+  background: #363636;
+  transition: all 0.4s ease 0s;
 }
