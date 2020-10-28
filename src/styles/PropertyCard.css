@@ -1,0 +1,11 @@
+.property-card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  display: grid;
+  background-color: lightgray;
+  padding: 29px;
+  width: 50%;
+}
