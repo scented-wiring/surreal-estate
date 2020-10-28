@@ -1,53 +1,32 @@
 .AddProperty {
-  margin-left: 19px;
-  margin-right: 19px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 8px;
   grid-column: 1 / 4;
   grid-row: 3 / 4;
   display: grid;
   background-color: lightgray;
   padding: 15px;
+  width: 50%;
 }
 
-.input-title {
-  width: 200px;
-  margin-left: 5px;
-  margin-right: 12px;
+.form-add-property {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
-.input-city {
-  margin-left: 5px;
-  margin-right: 12px;
-}
-
-.select-type {
-  margin-left: 5px;
-  margin-right: 12px;
-}
-
-.select-bedrooms {
-  margin-left: 5px;
-  margin-right: 12px;
-}
-
-.select-bathrooms {
-  margin-left: 5px;
-  margin-right: 12px;
-}
-
-.input-price {
-  width: 60px;
-  margin-left: 5px;
-  margin-right: 12px;
-}
-
-.input-email {
-  width: 230px;
-  margin-left: 5px;
-  margin-right: 12px;
+label {
+  display: grid;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .add-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   width: 60px;
   color: #fff !important;
   background: purple;
