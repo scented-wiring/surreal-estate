@@ -10,7 +10,7 @@ const AddProperty = () => {
       city: "Manchester",
       type: "Flat",
       bedrooms: "",
-      bathroomss: "",
+      bathrooms: "",
       price: "",
       email: "",
     },
