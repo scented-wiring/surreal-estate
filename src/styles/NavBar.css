@@ -1,15 +1,15 @@
 .navbar {
+  font-size: 20px;
   border-bottom: black 1px solid;
-}
-
-.logo {
-  width: 200px;
-  padding-right: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
 }
 
 .navbar-links {
   padding: 0;
   display: inline-block;
+  margin-left: 45px;
 }
 
 .navbar-links-item {

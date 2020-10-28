@@ -9,3 +9,12 @@
   padding: 29px;
   width: 50%;
 }
+
+.property-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.property-type-city {
+  font-style: italic;
+}
