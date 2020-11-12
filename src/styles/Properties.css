@@ -1,9 +1,4 @@
-.properties {
-  margin-left: 19px;
-  margin-top: 8px;
-}
-
-.col {
+.card {
   display: inline-block;
   width: 33.33%;
   padding: 0.2rem;
