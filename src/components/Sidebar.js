@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Sidebar.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import qs from "qs";
 
 const Sidebar = () => {
   const { search } = useLocation();
+  const history = useHistory();
+
+  const [query, setQuery] = useState("");
 
   const buildQueryString = (operation, valueObj) => {
     const currentQueryParams = qs.parse(search, { ignoreQueryPrefix: true });
     const newQueryParams = {
       ...currentQueryParams,
-      [operation]: JSON.stringify(valueObj),
+      [operation]: JSON.stringify({
+        ...JSON.parse(currentQueryParams[operation] || "{}"),
+        ...valueObj,
+      }),
     };
 
     return qs.stringify(newQueryParams, {
@@ -19,9 +25,29 @@ const Sidebar = () => {
     });
   };
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+
+    const newQueryString = buildQueryString("query", {
+      title: { $regex: query },
+    });
+
+    history.push(newQueryString);
+  };
+
   return (
     <div className="sidebar">
-      <div className="item">Filter by city</div>
+      <div className="search">
+        <form onSubmit={handleSearch}>
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div className="item-title">Filter by city</div>
       <div className="item">
         <Link to={buildQueryString("query", { city: "Manchester" })}>
           Manchester
@@ -40,7 +66,7 @@ const Sidebar = () => {
           Liverpool
         </Link>
       </div>
-      <div className="item">Sort by</div>
+      <div className="item-title">Sort by</div>
       <div className="item">
         <Link to={buildQueryString("sort", { price: -1 })}>
           Price - Descending
