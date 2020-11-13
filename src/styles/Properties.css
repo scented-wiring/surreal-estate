@@ -3,11 +3,12 @@
 }
 
 .property-display {
+  justify-content: left;
   display: flex;
   flex-wrap: wrap;
 }
 
 .card {
-  flex: 0 0 400px;
+  flex: 0 0 450px;
   box-sizing: border-box;
 }
