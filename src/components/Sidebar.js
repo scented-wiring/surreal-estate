@@ -29,7 +29,7 @@ const Sidebar = () => {
     event.preventDefault();
 
     const newQueryString = buildQueryString("query", {
-      title: { $regex: query },
+      title: { $regex: query, $options: "i" },
     });
 
     history.push(newQueryString);
