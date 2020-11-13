@@ -1,6 +1,13 @@
+.properties {
+  display: flex;
+}
+
+.property-display {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
-  display: inline-block;
-  width: 33.33%;
-  padding: 0.2rem;
+  flex: 0 0 400px;
   box-sizing: border-box;
 }

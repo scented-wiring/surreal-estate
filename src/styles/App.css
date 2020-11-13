@@ -1,8 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
 
+body {
+  color: #12100e;
+  background-color: lightgray;
+}
+
 .App {
   font-family: "Noto Sans JP", sans-serif;
   color: #12100e;
-  background-color: white;
-  padding-bottom: 15px;
+  background-color: lightgray;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+a:active {
+  text-decoration: none;
 }

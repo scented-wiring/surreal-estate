@@ -5,13 +5,14 @@
   grid-column: 1 / 4;
   grid-row: 3 / 4;
   display: grid;
-  background-color: lightgray;
+  background-color: white;
   padding: 29px;
   width: 50%;
+  border: black 2px solid;
 }
 
 .property-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 

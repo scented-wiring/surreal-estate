@@ -1,13 +1,14 @@
 .AddProperty {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 8px;
+  margin-top: 25px;
   grid-column: 1 / 4;
   grid-row: 3 / 4;
   display: grid;
-  background-color: lightgray;
+  background-color: white;
   padding: 15px;
-  width: 50%;
+  width: 30%;
+  border: 2px solid black;
 }
 
 .form-add-property {

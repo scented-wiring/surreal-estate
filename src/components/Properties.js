@@ -36,11 +36,13 @@ const Properties = () => {
     <div className="properties">
       <Sidebar />
       <Alert message={alert.message} success={alert.isSuccess} />
-      {properties.map((property) => (
-        <div key={property.id} className="card">
-          <PropertyCard key={property._id} {...property} />
-        </div>
-      ))}
+      <div className="property-display">
+        {properties.map((property) => (
+          <div key={property._id} className="card">
+            <PropertyCard key={property._id} {...property} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

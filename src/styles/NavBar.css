@@ -1,17 +1,21 @@
+body {
+  width: 100%;
+  margin: 0;
+}
+
 .navbar {
+  padding-left: 30px;
   font-size: 20px;
   border-bottom: black 1px solid;
-  margin: 0 50px 20px 50px;
+  background-color: white;
 }
 
 .navbar-links {
-  padding: 0;
   display: inline-block;
-  margin-left: 45px;
 }
 
 .navbar-links-item {
   padding-right: 40px;
   display: inline-block;
-  font-size: 14px;
+  font-size: 17px;
 }
