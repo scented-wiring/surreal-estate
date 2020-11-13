@@ -36,7 +36,7 @@ const Properties = () => {
     <div className="properties">
       <Sidebar />
       <Alert message={alert.message} success={alert.isSuccess} />
-      <div className="property-display">
+      <div className="cards">
         {properties.map((property) => (
           <div key={property._id} className="card">
             <PropertyCard key={property._id} {...property} />

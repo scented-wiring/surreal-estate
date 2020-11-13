@@ -18,7 +18,7 @@ const PropertyCard = ({
   email,
 }) => {
   return (
-    <div className="property-card">
+    <div>
       <div className="property-title">{title}</div>
       <div className="property-type-city">
         {type}, {city}
@@ -35,7 +35,7 @@ const PropertyCard = ({
       </div>
       <div className="property-email">
         <FontAwesomeIcon icon={faAt} />
-        <a href={"mailto:" + email}>Email</a>
+        <a href={"mailto:" + email}>email</a>
       </div>
     </div>
   );
