@@ -2,13 +2,18 @@
   display: flex;
 }
 
-.property-display {
-  justify-content: left;
+.cards {
   display: flex;
   flex-wrap: wrap;
 }
 
 .card {
-  flex: 0 0 450px;
-  box-sizing: border-box;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  background-color: white;
+  padding: 15px;
+  border: black 2px solid;
+  width: 320px;
+  height: 150px;
 }
