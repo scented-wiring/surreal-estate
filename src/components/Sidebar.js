@@ -42,6 +42,7 @@ const Sidebar = () => {
           <input
             type="text"
             value={query}
+            id="input"
             onChange={(e) => setQuery(e.target.value)}
           />
           <button type="submit">Search</button>

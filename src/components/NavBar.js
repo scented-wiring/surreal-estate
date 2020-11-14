@@ -1,21 +1,41 @@
 import React from "react";
 import "../styles/NavBar.css";
+import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIgloo } from "@fortawesome/free-solid-svg-icons";
+import { faIgloo, faPoo } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = () => {
+const NavBar = (onLogin, onLogout, userID) => {
   return (
-    <div className="navbar">
-      <FontAwesomeIcon icon={faIgloo} /> Surreal Estate
-      <ul className="navbar-links">
-        <li className="navbar-links-item">
+    <div className="display">
+      <div className="title">
+        <FontAwesomeIcon icon={faIgloo} /> Surreal Estate
+      </div>
+      <div className="navbar">
+        <div className="navbar-item">
           <Link to="/">View Properties</Link>
-        </li>
-        <li className="navbar-links-item">
+        </div>
+        <div className="navbar-item">
           <Link to="/add-property">Add a Property</Link>
-        </li>
-      </ul>
+        </div>
+        <div className="navbar-item">
+          {userID ? (
+            <button className="login" onClick={onLogout}>
+              Sign out from Facebook
+            </button>
+          ) : (
+            <FacebookLogin
+              appId="506497520308627"
+              callback={onLogin}
+              render={(renderProps) => (
+                <button className="login" onClick={renderProps.onClick}>
+                  Login with Facebook <FontAwesomeIcon icon={faPoo} />
+                </button>
+              )}
+            />
+          )}
+        </div>
+      </div>
     </div>
   );
 };
