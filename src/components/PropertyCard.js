@@ -6,9 +6,11 @@ import {
   faBed,
   faPoundSign,
   faEnvelope,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
 const PropertyCard = ({
+  _id,
   title,
   type,
   bathrooms,
@@ -16,6 +18,8 @@ const PropertyCard = ({
   price,
   city,
   email,
+  userID,
+  onSaveProperty,
 }) => {
   return (
     <div className="property-card">
@@ -33,14 +37,20 @@ const PropertyCard = ({
         <FontAwesomeIcon icon={faPoundSign} />
         {price}
       </div>
-      <div className="property-email">
+      <div className="button">
         <button className="email-button">
-          <FontAwesomeIcon icon={faEnvelope} />
-          <a className="email-text" href={"mailto:" + email}>
-            Email
+          <a className="button-text" href={"mailto:" + email}>
+            <FontAwesomeIcon icon={faEnvelope} /> Email
           </a>
         </button>
       </div>
+      {userID && (
+        <div className="button">
+          <button className="button-text" onClick={() => onSaveProperty(_id)}>
+            <FontAwesomeIcon icon={faStar} /> Save
+          </button>
+        </div>
+      )}
     </div>
   );
 };

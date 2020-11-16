@@ -6,7 +6,7 @@ import Alert from "../components/Alert";
 import PropertyCard from "../components/PropertyCard";
 import Sidebar from "../components/Sidebar";
 
-const Properties = () => {
+const Properties = ({ userID }) => {
   const [properties, setProperties] = useState([]);
 
   const [alert, setAlert] = useState({ message: "", isSuccess: false });
@@ -32,14 +32,30 @@ const Properties = () => {
       .catch((err) => console.error(err));
   }, [search]);
 
+  const handleSaveProperty = (propertyId) => {
+    axios.post("http://localhost:4000/api/v1/Favourite", {
+      propertyListing: propertyId,
+      fbUserId: userID,
+    });
+  };
+
   return (
     <div className="properties">
       <Sidebar />
-      <Alert message={alert.message} success={alert.isSuccess} />
+      <Alert
+        className="alert"
+        message={alert.message}
+        success={alert.isSuccess}
+      />
       <div className="cards">
         {properties.map((property) => (
           <div key={property._id} className="card">
-            <PropertyCard key={property._id} {...property} />
+            <PropertyCard
+              key={property._id}
+              {...property}
+              userID={userID}
+              onSaveProperty={handleSaveProperty}
+            />
           </div>
         ))}
       </div>
