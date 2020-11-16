@@ -1,3 +1,7 @@
+.property-card > div {
+  margin: 0 0 10px 0;
+}
+
 .property-title {
   font-size: 18px;
   font-weight: bold;
@@ -5,4 +9,16 @@
 
 .property-type-city {
   font-style: italic;
+}
+
+.property-email {
+  margin-top: 10px;
+}
+
+.email-button {
+  width: 100%;
+}
+
+.email-text {
+  color: white;
 }
