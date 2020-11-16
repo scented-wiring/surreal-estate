@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIgloo } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = (onLogin, onLogout, userID) => {
+const NavBar = ({ onLogin, onLogout, userID }) => {
   return (
     <div className="display">
       <div className="title">
@@ -24,7 +24,7 @@ const NavBar = (onLogin, onLogout, userID) => {
               Sign out from Facebook
             </button>
           ) : (
-            <FacebookLogin callback={onLogin} appId="506497520308627" />
+            <FacebookLogin appId="506497520308627" callback={onLogin} />
           )}
         </div>
       </div>
