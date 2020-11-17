@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/App.css";
 import NavBar from "./NavBar";
 import Properties from "./Properties";
+import Favourites from "./Favourites";
 import AddProperty from "./AddProperty";
 import { Switch, Route } from "react-router-dom";
 
@@ -22,6 +23,12 @@ const App = () => {
           exact
           path="/"
           render={(props) => <Properties {...props} userID={userID} />}
+        />
+        <Route
+          exact
+          path="/favourites"
+          component={Favourites}
+          userID={userID}
         />
         <Route exact path="/add-property" component={AddProperty} />
       </Switch>

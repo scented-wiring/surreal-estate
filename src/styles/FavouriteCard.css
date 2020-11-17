@@ -1,0 +1,22 @@
+.favourite-card {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  background-color: white;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.favourite-remove {
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+}
+
+.favourite-remove:hover {
+  background-color: #8e0000;
+  transition: all 0.4s ease 0s;
+}

@@ -15,8 +15,12 @@ const NavBar = ({ onLogin, onLogout, userID }) => {
         <Link to="/">View Properties</Link>
       </div>
       <div className="navbar-link">
+        <Link to="/favourites">Favourites</Link>
+      </div>
+      <div className="navbar-link">
         <Link to="/add-property">Add a Property</Link>
       </div>
+
       <div className="navbar-login">
         {userID ? (
           <button className="navbar-login-button" onClick={onLogout}>
