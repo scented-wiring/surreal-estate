@@ -58,8 +58,7 @@ const AddProperty = () => {
             name="title"
             value={fields.title}
             onChange={handleFieldChange}
-            placeholder="2 bed flat"
-            className="input-title"
+            placeholder="2 Bed Flat"
           />
         </label>
         <label htmlFor="city">
@@ -69,7 +68,6 @@ const AddProperty = () => {
             name="city"
             value={fields.city}
             onChange={handleFieldChange}
-            className="input-city"
           >
             <option value="Manchester">Manchester</option>
             <option value="Leeds">Leeds</option>
@@ -128,7 +126,7 @@ const AddProperty = () => {
           </select>
         </label>
         <label htmlFor="price">
-          Price £
+          Price (£)
           <input
             id="price"
             name="price"

@@ -42,11 +42,7 @@ const Properties = ({ userID }) => {
   return (
     <div className="properties">
       <Sidebar />
-      <Alert
-        className="alert"
-        message={alert.message}
-        success={alert.isSuccess}
-      />
+      <Alert message={alert.message} success={alert.isSuccess} />
       <div className="cards">
         {properties.map((property) => (
           <div key={property._id} className="card">

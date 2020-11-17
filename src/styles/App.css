@@ -2,7 +2,10 @@
 
 body {
   background-color: lightgray;
+  margin: 0;
+  height: 100%;
 }
+
 .App {
   font-family: "Noto Sans JP", sans-serif;
   color: #12100e;
@@ -23,7 +26,8 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: red;
+  font-weight: bold;
+  color: black;
 }
 
 a:active {

@@ -1,7 +1,11 @@
 .alert-success {
   color: green;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .alert-error {
   color: red;
+  margin-left: auto;
+  margin-right: auto;
 }

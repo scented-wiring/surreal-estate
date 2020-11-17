@@ -40,12 +40,15 @@ const Sidebar = () => {
       <div className="search">
         <form onSubmit={handleSearch}>
           <input
+            className="search-input"
             type="text"
             value={query}
             id="input"
             onChange={(e) => setQuery(e.target.value)}
           />
-          <button type="submit">Search</button>
+          <button className="search-button" type="submit">
+            Search
+          </button>
         </form>
       </div>
       <div className="item-title">Filter by city</div>
