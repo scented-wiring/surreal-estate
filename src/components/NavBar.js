@@ -24,7 +24,7 @@ const NavBar = ({ onLogin, onLogout, userID }) => {
       <div className="navbar-login">
         {userID ? (
           <button className="navbar-login-button" onClick={onLogout}>
-            Sign out from Facebook
+            Sign out from facebook
           </button>
         ) : (
           <FacebookLogin
@@ -35,7 +35,7 @@ const NavBar = ({ onLogin, onLogout, userID }) => {
                 className="navbar-login-button"
                 onClick={renderProps.onClick}
               >
-                Login with Facebook
+                Login with facebook
               </button>
             )}
           />
