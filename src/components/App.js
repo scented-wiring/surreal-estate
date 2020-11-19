@@ -27,8 +27,7 @@ const App = () => {
         <Route
           exact
           path="/favourites"
-          component={Favourites}
-          userID={userID}
+          render={(props) => <Favourites {...props} userID={userID} />}
         />
         <Route exact path="/add-property" component={AddProperty} />
       </Switch>

@@ -5,7 +5,7 @@ import axios from "axios";
 import FavouriteCard from "./FavouriteCard";
 import { useEffect } from "react";
 
-const Favourites = (userID) => {
+const Favourites = ({ userID }) => {
   const [favourites, setFavourites] = useState([]);
   const [alert, setAlert] = useState({ message: "", isSuccess: false });
 
@@ -48,7 +48,7 @@ const Favourites = (userID) => {
       });
   };
 
-  if (favourites.length === 0 || !userID) {
+  if (!userID || favourites.length === 0) {
     return (
       <div className="favourites-display">
         <Alert message={alert.message} success={alert.isSuccess} />
