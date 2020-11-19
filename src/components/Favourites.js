@@ -50,13 +50,13 @@ const Favourites = ({ userID }) => {
 
   if (alert.message === "Could not connect to server.") {
     return (
-      <div className="favourites-display">
+      <div className="favourites">
         <Alert message={alert.message} success={alert.isSuccess} />
       </div>
     );
   } else if (!userID || favourites.length === 0) {
     return (
-      <div className="favourites-display">
+      <div className="favourites">
         <Alert message={alert.message} success={alert.isSuccess} />
         <div className="no-favourites">
           No favourites found. Log in with Facebook to select and view
@@ -66,7 +66,7 @@ const Favourites = ({ userID }) => {
     );
   } else {
     return (
-      <div className="favourites-display">
+      <div className="favourites">
         <Alert message={alert.message} success={alert.isSuccess} />
         {favourites.map((favourite) => (
           <div key={favourite._id}>

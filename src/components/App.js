@@ -16,7 +16,7 @@ const App = () => {
   const handleLogout = () => window.FB.logout(() => setUserID(""));
 
   return (
-    <div className="App">
+    <div className="app">
       <NavBar onLogin={handleLogin} onLogout={handleLogout} userID={userID} />
       <Switch>
         <Route

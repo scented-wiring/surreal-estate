@@ -1,9 +1,9 @@
 .property-card-display > div {
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
 }
 
 .property-title {
-  font-size: 18px;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
@@ -14,7 +14,6 @@
 .button {
   background-color: purple;
   color: white;
-  border: none;
   width: 100%;
   margin-bottom: 10px;
   margin-left: auto;

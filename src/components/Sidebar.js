@@ -37,20 +37,19 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <div className="search">
-        <form onSubmit={handleSearch}>
-          <input
-            className="search-input"
-            type="text"
-            value={query}
-            id="input"
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <button className="search-button" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
+      <form onSubmit={handleSearch}>
+        <input
+          className="search-input"
+          type="text"
+          value={query}
+          id="input"
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button className="search-button" type="submit">
+          Search
+        </button>
+      </form>
+
       <div className="item-title">Filter by city</div>
       <div className="item">
         <Link to={buildQueryString("query", { city: "Manchester" })}>
@@ -70,6 +69,7 @@ const Sidebar = () => {
           Liverpool
         </Link>
       </div>
+
       <div className="item-title">Sort by</div>
       <div className="item">
         <Link to={buildQueryString("sort", { price: -1 })}>
