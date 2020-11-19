@@ -1,6 +1,9 @@
 .favourites-display {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.no-favourites {
+  margin-top: 10px;
 }

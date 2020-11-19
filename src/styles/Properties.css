@@ -2,18 +2,23 @@
   display: flex;
 }
 
-.cards {
+.property-cards {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
 
-.card {
+.property-card {
   width: 30%;
   height: 20%;
   margin: 10px;
   background-color: white;
   padding: 5px;
   border: black 2px solid;
+}
+
+.property-alert {
+  width: 100%;
+  margin-left: 10px;
 }
