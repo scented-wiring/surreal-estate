@@ -8,8 +8,8 @@ import Sidebar from "../components/Sidebar";
 
 const Properties = ({ userID }) => {
   const [properties, setProperties] = useState([]);
-
   const [alert, setAlert] = useState({ message: "", isSuccess: false });
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
     axios
@@ -21,6 +21,7 @@ const Properties = ({ userID }) => {
           isSuccess: false,
         });
       });
+    setLoad(false);
   }, []);
 
   const { search } = useLocation();
@@ -38,6 +39,14 @@ const Properties = ({ userID }) => {
       fbUserId: userID,
     });
   };
+
+  if (load === true) {
+    return (
+      <div className="properties">
+        <div className="alert-success">Loading...</div>
+      </div>
+    );
+  }
 
   if (alert.message === "Could not connect to server.") {
     return (
