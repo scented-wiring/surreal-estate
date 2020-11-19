@@ -17,7 +17,7 @@ const Properties = ({ userID }) => {
       .then((response) => setProperties(response.data))
       .catch(() => {
         setAlert({
-          message: "Could not connect to server",
+          message: "Could not connect to server.",
           isSuccess: false,
         });
       });
@@ -39,12 +39,17 @@ const Properties = ({ userID }) => {
     });
   };
 
+  if (alert.message === "Could not connect to server.") {
+    return (
+      <div className="properties">
+        <Alert message={alert.message} success={alert.isSuccess} />
+      </div>
+    );
+  }
+
   return (
     <div className="properties">
       <Sidebar />
-      <div className="property-alert">
-        <Alert message={alert.message} success={alert.isSuccess} />{" "}
-      </div>
       <div className="property-cards">
         {properties.map((property) => (
           <div key={property._id} className="property-card">
