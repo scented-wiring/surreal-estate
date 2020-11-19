@@ -17,7 +17,7 @@ Alert.defaultProps = {
 };
 
 Alert.propTypes = {
-  message: PropTypes.string.isRequired,
+  message: PropTypes.string,
   success: PropTypes.bool,
 };
 

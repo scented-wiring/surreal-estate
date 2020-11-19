@@ -31,13 +31,13 @@ const AddProperty = () => {
       .post("http://localhost:4000/api/v1/PropertyListing", { ...fields })
       .then(() =>
         setAlert({
-          message: "Property Added",
+          message: "Property added.",
           isSuccess: true,
         })
       )
       .catch(() => {
         setAlert({
-          message: "Server error. Please try again later.",
+          message: "Could not connect to server.",
           isSuccess: false,
         });
       });

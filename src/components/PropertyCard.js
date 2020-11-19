@@ -22,7 +22,7 @@ const PropertyCard = ({
   onSaveProperty,
 }) => {
   return (
-    <div className="property-card">
+    <div className="property-card-display">
       <div className="property-title">{title}</div>
       <div className="property-type-city">
         {type}, {city}

@@ -18,7 +18,7 @@ const Favourites = ({ userID }) => {
       })
       .catch(() => {
         setAlert({
-          message: "Could not retrieve favourites",
+          message: "Could not connect to server.",
           isSuccess: false,
         });
       });
@@ -38,7 +38,7 @@ const Favourites = ({ userID }) => {
       })
       .then(() => setFavourites(favourites.filter((fav) => fav._id !== _id)))
       .then(() => {
-        setTimeout(() => setAlert({ message: "", isSuccess: false }), 3000);
+        setTimeout(() => setAlert({ message: "", isSuccess: false }), 2000);
       })
       .catch(() => {
         setAlert({
@@ -48,11 +48,20 @@ const Favourites = ({ userID }) => {
       });
   };
 
-  if (!userID || favourites.length === 0) {
+  if (alert.message === "Could not connect to server.") {
     return (
       <div className="favourites-display">
         <Alert message={alert.message} success={alert.isSuccess} />
-        No favourites found. Log in with Facebook to select and view favourites.
+      </div>
+    );
+  } else if (!userID || favourites.length === 0) {
+    return (
+      <div className="favourites-display">
+        <Alert message={alert.message} success={alert.isSuccess} />
+        <div className="no-favourites">
+          No favourites found. Log in with Facebook to select and view
+          favourites.
+        </div>
       </div>
     );
   } else {

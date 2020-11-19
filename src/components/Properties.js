@@ -17,7 +17,7 @@ const Properties = ({ userID }) => {
       .then((response) => setProperties(response.data))
       .catch(() => {
         setAlert({
-          message: "Could not retrieve properties",
+          message: "Could not connect to server",
           isSuccess: false,
         });
       });
@@ -42,10 +42,12 @@ const Properties = ({ userID }) => {
   return (
     <div className="properties">
       <Sidebar />
-      <Alert message={alert.message} success={alert.isSuccess} />
-      <div className="cards">
+      <div className="property-alert">
+        <Alert message={alert.message} success={alert.isSuccess} />{" "}
+      </div>
+      <div className="property-cards">
         {properties.map((property) => (
-          <div key={property._id} className="card">
+          <div key={property._id} className="property-card">
             <PropertyCard
               key={property._id}
               {...property}
