@@ -1,9 +1,9 @@
 .sidebar {
-  flex: 0 1 230px;
+  flex: 0 0 230px;
   width: 270px;
   padding-left: 20px;
   font-size: 1em;
-  background-color: white;
+  background-color: #fff6e7;
   padding-bottom: 21.8%;
 }
 
@@ -14,7 +14,6 @@
 .search-button {
   height: 21px;
   color: white;
-  background-color: purple;
 }
 
 .search-button:hover {
@@ -28,6 +27,7 @@
 
 .item-title {
   padding: 0 0 20px 0;
+  font-size: 1.2em;
   font-weight: bold;
   text-decoration: underline;
 }

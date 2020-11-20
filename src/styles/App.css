@@ -3,19 +3,16 @@
 html,
 body {
   margin: 0;
-  background-color: lightgray;
-  height: 100%;
+  background-color: #ad8a67;
 }
 
 .app {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1em;
-  color: #12100e;
-  height: 100%;
 }
 
 a {
-  color: purple;
+  color: black;
 }
 
 a:link {
@@ -28,21 +25,19 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: black;
+  color: #ad8a67;
 }
 
 a:active {
   text-decoration: none;
 }
 
-.navbar-link > a {
-  color: white;
-}
-
-.navbar-link > a:hover {
-  color: black;
-}
-
 button {
   border: none;
+  background-color: #402e32;
+}
+
+button:hover {
+  color: #ffad48;
+  transition: all 0.4s ease 0s;
 }
