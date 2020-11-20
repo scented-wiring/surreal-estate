@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/FavouriteCard.css";
+import PropTypes from "prop-types";
 import axios from "axios";
 import Alert from "./Alert";
 
@@ -32,6 +33,12 @@ const FavouriteCard = ({ propertyListing, _id, removeFavourite }) => {
       </button>
     </div>
   );
+};
+
+FavouriteCard.propTypes = {
+  propertyListing: PropTypes.string.isRequired,
+  _id: PropTypes.string.isRequired,
+  removeFavourite: PropTypes.func.isRequired,
 };
 
 export default FavouriteCard;

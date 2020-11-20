@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/PropertyCard.css";
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBath,
@@ -49,6 +50,19 @@ const PropertyCard = ({
       )}
     </div>
   );
+};
+
+PropertyCard.propTypes = {
+  _id: PropTypes.string,
+  title: PropTypes.string,
+  type: PropTypes.string,
+  bathrooms: PropTypes.string,
+  bedrooms: PropTypes.string,
+  price: PropTypes.string,
+  city: PropTypes.string,
+  email: PropTypes.string,
+  userID: PropTypes.string,
+  onSaveProperty: PropTypes.func.isRequired,
 };
 
 export default PropertyCard;

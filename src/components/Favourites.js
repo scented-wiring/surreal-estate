@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Favourites.css";
+import PropTypes from "prop-types";
 import Alert from "./Alert";
 import axios from "axios";
 import FavouriteCard from "./FavouriteCard";
@@ -80,6 +81,10 @@ const Favourites = ({ userID }) => {
       </div>
     );
   }
+};
+
+Favourites.propTypes = {
+  userID: PropTypes.string.isRequired,
 };
 
 export default Favourites;

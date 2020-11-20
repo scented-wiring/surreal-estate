@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 import axios from "axios";
 import "../styles/Properties.css";
 import Alert from "../components/Alert";
@@ -73,6 +74,10 @@ const Properties = ({ userID }) => {
       </div>
     </div>
   );
+};
+
+Properties.propTypes = {
+  userID: PropTypes.string.isRequired,
 };
 
 export default Properties;

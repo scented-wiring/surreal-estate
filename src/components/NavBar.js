@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/NavBar.css";
+import PropTypes from "prop-types";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,6 +44,12 @@ const NavBar = ({ onLogin, onLogout, userID }) => {
       </div>
     </div>
   );
+};
+
+NavBar.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
+  userID: PropTypes.string.isRequired,
 };
 
 export default NavBar;
