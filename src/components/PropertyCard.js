@@ -28,13 +28,13 @@ const PropertyCard = ({
       <div className="property-type-city">
         {type}, {city}
       </div>
-      <div>
+      <div className="property-bathrooms">
         <FontAwesomeIcon icon={faBath} /> {bathrooms}
       </div>
-      <div>
+      <div className="property-bedrooms">
         <FontAwesomeIcon icon={faBed} /> {bedrooms}
       </div>
-      <div>
+      <div className="property-price">
         <FontAwesomeIcon icon={faPoundSign} />
         {price}
       </div>

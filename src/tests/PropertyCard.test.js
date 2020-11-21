@@ -2,44 +2,71 @@ import React from "react";
 import { render } from "@testing-library/react";
 import PropertyCard from "../components/PropertyCard";
 
-test("renders a title", () => {
-  const { getByText } = render(<PropertyCard title="test" />);
-  const title = getByText("test");
-  expect(title).toBeInTheDocument();
-});
+describe("PropertyCard", () => {
+  const mockData = {
+    _id: "000000",
+    title: "2 Bedroom Flat",
+    type: "Flat",
+    bathrooms: "1",
+    bedrooms: "2",
+    price: "1000",
+    city: "Manchester",
+    email: "example@test.com",
+    userID: "11111",
+    onSaveProperty: jest.fn(),
+  };
 
-test("renders a type", () => {
-  const { getByText } = render(<PropertyCard type="flat" />);
-  const type = getByText("flat");
-  expect(type).toBeInTheDocument();
-});
+  it("renders a component", () => {
+    const { asFragment } = render(<PropertyCard />);
 
-test("renders bathrooms", () => {
-  const { getByText } = render(<PropertyCard bathrooms={2} />);
-  const bathrooms = getByText("2");
-  expect(bathrooms).toBeInTheDocument();
-});
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-test("renders bedrooms", () => {
-  const { getByText } = render(<PropertyCard bedrooms={4} />);
-  const bedrooms = getByText("4");
-  expect(bedrooms).toBeInTheDocument();
-});
+  it("renders a title", () => {
+    const { getByText } = render(<PropertyCard {...mockData} />);
 
-test("renders price", () => {
-  const { getByText } = render(<PropertyCard price={40000} />);
-  const price = getByText("40000");
-  expect(price).toBeInTheDocument();
-});
+    expect(getByText("2 Bedroom Flat")).toHaveClass("property-title");
+  });
 
-test("renders city", () => {
-  const { getByText } = render(<PropertyCard city="Manchester" />);
-  const city = getByText("Manchester");
-  expect(city).toBeInTheDocument();
-});
+  it("renders a type and city", () => {
+    const { getByText } = render(<PropertyCard {...mockData} />);
 
-test("renders email", () => {
-  const { getByText } = render(<PropertyCard email="hello@internet.com" />);
-  const email = getByText("hello@internet.com");
-  expect(email).toBeInTheDocument();
+    expect(getByText("Flat, Manchester")).toHaveClass("property-type-city");
+  });
+
+  it("renders a bathroom number", () => {
+    const { getByText } = render(<PropertyCard {...mockData} />);
+
+    expect(getByText("1")).toHaveClass("property-bathrooms");
+  });
+
+  it("renders a bedroom number", () => {
+    const { getByText } = render(<PropertyCard {...mockData} />);
+
+    expect(getByText("2")).toHaveClass("property-bedrooms");
+  });
+
+  it("renders a price", () => {
+    const { getByText } = render(<PropertyCard {...mockData} />);
+
+    expect(getByText("1000")).toHaveClass("property-price");
+  });
+
+  it("renders an email button", () => {
+    const { getByText } = render(<PropertyCard {...mockData} />);
+
+    expect(getByText("Email")).toHaveClass("button-text");
+  });
+
+  it("renders a save button if user is logged in", () => {
+    const { getByText } = render(<PropertyCard {...mockData} />);
+
+    expect(getByText("Save")).toHaveClass("button");
+  });
+
+  it("doesn't render a save button if user is logged out", () => {
+    const { queryByText } = render(<PropertyCard userID="" />);
+
+    expect(queryByText("Save")).not.toBeInTheDocument();
+  });
 });
