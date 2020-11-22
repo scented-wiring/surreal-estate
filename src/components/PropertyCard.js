@@ -62,7 +62,7 @@ PropertyCard.propTypes = {
   city: PropTypes.string,
   email: PropTypes.string,
   userID: PropTypes.string,
-  onSaveProperty: PropTypes.func.isRequired,
+  onSaveProperty: PropTypes.func,
 };
 
 export default PropertyCard;

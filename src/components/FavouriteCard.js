@@ -36,9 +36,9 @@ const FavouriteCard = ({ propertyListing, _id, removeFavourite }) => {
 };
 
 FavouriteCard.propTypes = {
-  propertyListing: PropTypes.string.isRequired,
-  _id: PropTypes.string.isRequired,
-  removeFavourite: PropTypes.func.isRequired,
+  propertyListing: PropTypes.string,
+  _id: PropTypes.string,
+  removeFavourite: PropTypes.func,
 };
 
 export default FavouriteCard;

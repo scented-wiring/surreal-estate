@@ -44,36 +44,36 @@ const Properties = ({ userID }) => {
   if (load === true) {
     return (
       <div className="properties">
+        <Sidebar />
         <div className="alert-success">Loading...</div>
       </div>
     );
-  }
-
-  if (alert.message === "Could not connect to server.") {
+  } else if (alert.message === "Could not connect to server.") {
     return (
       <div className="properties">
+        <Sidebar />
         <Alert message={alert.message} success={alert.isSuccess} />
       </div>
     );
-  }
-
-  return (
-    <div className="properties">
-      <Sidebar />
-      <div className="property-cards">
-        {properties.map((property) => (
-          <div key={property._id} className="property-card">
-            <PropertyCard
-              key={property._id}
-              {...property}
-              userID={userID}
-              onSaveProperty={handleSaveProperty}
-            />
-          </div>
-        ))}
+  } else {
+    return (
+      <div className="properties">
+        <Sidebar />
+        <div className="property-cards">
+          {properties.map((property) => (
+            <div key={property._id} className="property-card">
+              <PropertyCard
+                key={property._id}
+                {...property}
+                userID={userID}
+                onSaveProperty={handleSaveProperty}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 Properties.propTypes = {
