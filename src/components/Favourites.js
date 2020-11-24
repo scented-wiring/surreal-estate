@@ -84,7 +84,7 @@ const Favourites = ({ userID }) => {
 };
 
 Favourites.propTypes = {
-  userID: PropTypes.string.isRequired,
+  userID: PropTypes.string,
 };
 
 export default Favourites;

@@ -16,7 +16,7 @@ describe("PropertyCard", () => {
     onSaveProperty: jest.fn(),
   };
 
-  it("renders a component", () => {
+  it("renders correctly", () => {
     const { asFragment } = render(<PropertyCard />);
 
     expect(asFragment()).toMatchSnapshot();

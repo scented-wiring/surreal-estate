@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FavouriteCard renders a component 1`] = `[Function]`;
+
+exports[`FavouriteCard renders correctly 1`] = `[Function]`;

@@ -21,3 +21,5 @@ exports[`Alert displays an error message 1`] = `
 `;
 
 exports[`Alert does not render an error or success message if message props is empty 1`] = `<DocumentFragment />`;
+
+exports[`Alert renders correctly 1`] = `[Function]`;

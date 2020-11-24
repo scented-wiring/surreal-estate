@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddProperty renders a component 1`] = `[Function]`;
+
+exports[`AddProperty renders correctly 1`] = `[Function]`;

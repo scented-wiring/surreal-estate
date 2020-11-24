@@ -9,7 +9,7 @@ beforeAll(() => {
 });
 
 describe("App", () => {
-  it("renders a component", () => {
+  it("renders correctly", () => {
     const { asFragment } = render(
       <MemoryRouter>
         <App />
