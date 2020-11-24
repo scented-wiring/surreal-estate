@@ -50,7 +50,9 @@ const Sidebar = () => {
         </button>
       </form>
 
-      <div className="item-title">Filter by city</div>
+      <div className="item-title" data-testid="item-title">
+        Filter by city
+      </div>
       <div className="item">
         <Link to={buildQueryString("query", { city: "Manchester" })}>
           Manchester
@@ -70,7 +72,9 @@ const Sidebar = () => {
         </Link>
       </div>
 
-      <div className="item-title">Sort by</div>
+      <div className="item-title" data-testid="item-title">
+        Sort by
+      </div>
       <div className="item">
         <Link to={buildQueryString("sort", { price: -1 })}>
           Price - Descending
