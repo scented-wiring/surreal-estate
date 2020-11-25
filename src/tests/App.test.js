@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { shallow, mount } from "enzyme";
 import App from "../components/App";
+import { BrowserRouter } from "react-router-dom";
 
 beforeAll(() => {
   const script = document.createElement("script");
@@ -10,21 +10,17 @@ beforeAll(() => {
 
 describe("App", () => {
   it("renders correctly", () => {
-    const { asFragment } = render(
-      <MemoryRouter>
-        <App />
-      </MemoryRouter>
-    );
-    expect(asFragment).toMatchSnapshot();
+    const wrapper = shallow(<App />);
+
+    expect(wrapper.exists()).toBe(true);
   });
 
-  it("renders a Navbar", () => {
-    const { getByText } = render(
-      <MemoryRouter>
+  it("renders 3 routes", () => {
+    const wrapper = mount(
+      <BrowserRouter>
         <App />
-      </MemoryRouter>
+      </BrowserRouter>
     );
-    const title = getByText("Surreal Estate");
-    expect(title).toBeInTheDocument();
+    expect(wrapper.find(".navbar-link")).toHaveLength(3);
   });
 });
