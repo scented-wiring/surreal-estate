@@ -2,8 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px 0 20px;
 }
 
 .no-favourites {
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 469px) {
+  .no-favourites {
+    font-size: 0.9em;
+  }
 }

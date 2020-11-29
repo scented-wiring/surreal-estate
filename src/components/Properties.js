@@ -13,6 +13,7 @@ const Properties = ({ userID }) => {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
+    setLoad(true);
     axios
       .get("http://localhost:4000/api/v1/PropertyListing")
       .then((response) => setProperties(response.data))
@@ -45,14 +46,18 @@ const Properties = ({ userID }) => {
     return (
       <div className="properties">
         <Sidebar />
-        <div className="alert-success">Loading...</div>
+        <div className="property-cards">
+          <div className="alert-success">Loading...</div>
+        </div>
       </div>
     );
   } else if (alert.message === "Could not connect to server.") {
     return (
       <div className="properties">
         <Sidebar />
-        <Alert message={alert.message} success={alert.isSuccess} />
+        <div className="property-cards">
+          <Alert message={alert.message} success={alert.isSuccess} />
+        </div>
       </div>
     );
   } else {

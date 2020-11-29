@@ -26,3 +26,13 @@ button > a:hover {
   color: #ffad48;
   transition: all 0.4s ease 0s;
 }
+
+@media only screen and (max-width: 469px) {
+  .property-title {
+    font-size: 1em;
+  }
+
+  .button {
+    font-size: 0.9em;
+  }
+}

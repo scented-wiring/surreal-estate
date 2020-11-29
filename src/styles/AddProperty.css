@@ -32,3 +32,10 @@ label {
 .add-button:hover {
   transition: all 0.4s ease 0s;
 }
+
+@media only screen and (max-width: 469px) {
+  .add-property {
+    width: 200px;
+    font-size: 0.9em;
+  }
+}

@@ -60,7 +60,7 @@ const Favourites = ({ userID }) => {
       <div className="favourites">
         <Alert message={alert.message} success={alert.isSuccess} />
         <div className="no-favourites">
-          No favourites found. Log in with Facebook to select and view
+          No favourites found. Login with Facebook to select and view
           favourites.
         </div>
       </div>

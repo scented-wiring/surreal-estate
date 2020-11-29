@@ -1,20 +1,21 @@
 .sidebar {
-  flex: 0 0 230px;
-  width: 270px;
-  padding-left: 20px;
+  flex: 1;
+  padding: 0 20px 0 20px;
   font-size: 1em;
   background-color: #fff6e7;
-  padding-bottom: 21.8%;
   border-right: 1px black solid;
+  border-bottom: 1px black solid;
+  min-height: calc(100vh - 61px);
 }
 
 .search-input {
-  margin: 10px 0 10px 0;
+  margin-top: 10px;
 }
 
 .search-button {
   height: 21px;
   color: white;
+  margin-bottom: 10px;
 }
 
 .search-button:hover {
@@ -31,4 +32,23 @@
   font-size: 1.2em;
   font-weight: bold;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 469px) {
+  .item-title {
+    font-size: 0.9em;
+  }
+
+  .sidebar {
+    font-size: 0.8em;
+    padding: 0 5px 0 5px;
+  }
+
+  .search-input {
+    width: 80px;
+  }
+
+  .search-button {
+    font-size: 0.9em;
+  }
 }

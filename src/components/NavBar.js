@@ -13,19 +13,26 @@ const NavBar = ({ onLogin, onLogout, userID }) => {
         <FontAwesomeIcon icon={faIgloo} /> Surreal Estate
       </div>
       <div className="navbar-link">
-        <Link to="/">View Properties</Link>
+        <Link to="/">
+          <span className="small-screen">View</span>
+          <span className="large-screen"> Properties</span>
+        </Link>
       </div>
       <div className="navbar-link">
         <Link to="/favourites">Favourites</Link>
       </div>
       <div className="navbar-link">
-        <Link to="/add-property">Add a Property</Link>
+        <Link to="/add-property">
+          <span className="small-screen">Add</span>
+          <span className="large-screen"> a Property</span>
+        </Link>
       </div>
 
       <div className="navbar-login">
         {userID ? (
           <button className="navbar-login-button" onClick={onLogout}>
-            Sign out from facebook
+            <span className="small-screen">Sign out</span>
+            <span className="large-screen"> from facebook</span>
           </button>
         ) : (
           <FacebookLogin
@@ -36,7 +43,8 @@ const NavBar = ({ onLogin, onLogout, userID }) => {
                 className="navbar-login-button"
                 onClick={renderProps.onClick}
               >
-                Login with facebook
+                <span className="small-screen">Login</span>
+                <span className="large-screen"> with facebook</span>
               </button>
             )}
           />

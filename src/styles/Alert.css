@@ -11,3 +11,13 @@
   margin-right: auto;
   margin-top: 10px;
 }
+
+@media only screen and (max-width: 469px) {
+  .alert-success {
+    font-size: 0.8em;
+  }
+
+  .alert-error {
+    font-size: 0.8em;
+  }
+}

@@ -12,8 +12,20 @@
 .favourite-remove {
   color: white;
   font-size: 16px;
+  margin-left: 5px;
 }
 
 .favourite-remove:hover {
   transition: all 0.4s ease 0s;
+}
+
+@media only screen and (max-width: 469px) {
+  .favourite-card {
+    width: 250px;
+    font-size: 0.9em;
+  }
+
+  .favourite-remove {
+    font-size: 1em;
+  }
 }

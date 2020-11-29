@@ -1,30 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
-
 .navbar {
   display: flex;
+  flex: 1;
   border-bottom: black 1px solid;
   height: 60px;
-  align-items: center;
-  width: 100%;
   background-color: #ffad48;
+  align-items: center;
 }
 
 .navbar-title {
-  align-items: center;
   padding-left: 20px;
-  font-size: 1.5em;
+  font-size: 2.2em;
   color: black;
 }
 
 .navbar-link {
-  display: flex;
-  align-items: center;
   padding-left: 30px;
-  height: 100%;
 }
 
 .navbar-login {
-  align-self: center;
   margin-left: auto;
 }
 
@@ -35,4 +28,41 @@
   height: 60px;
   padding: 0 25px 0 25px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media only screen and (max-width: 974px) {
+  .navbar-title {
+    font-size: 1.5em;
+  }
+
+  .navbar-login-button {
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media only screen and (max-width: 469px) {
+  .navbar-title {
+    font-size: 1.2em;
+    padding-left: 10px;
+  }
+
+  .navbar-link {
+    padding-left: 12px;
+    font-size: 0.8em;
+  }
+
+  .navbar-login-button {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navbar-title {
+    font-size: 0.8em;
+  }
+
+  .navbar-link {
+    font-size: 0.7em;
+    padding-left: 8px;
+  }
 }

@@ -7,8 +7,14 @@ body {
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1em;
+}
+
+.component {
+  flex: 1;
 }
 
 a {
@@ -40,4 +46,16 @@ button {
 button:hover {
   color: #ffad48;
   transition: all 0.4s ease 0s;
+}
+
+@media only screen and (max-width: 974px) {
+  .app {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 767px) {
+  .large-screen {
+    display: none;
+  }
 }
