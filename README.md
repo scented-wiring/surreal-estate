@@ -6,11 +6,11 @@ This app interacts with a database via API requests to allow the user to view/ad
 
 ### Desktop
 
-![App desktop screenshot](url)
+![App desktop screenshot](https://github.com/scented-wiring/surreal-estate/blob/master/README_screenshots/desktop-screenshot.png)
 
 ### Mobile
 
-![App mobile screenshot](url)
+![App mobile screenshot](https://github.com/scented-wiring/surreal-estate/blob/master/README_screenshots/mobile-screenshot.png)
 
 ## Built with
 
