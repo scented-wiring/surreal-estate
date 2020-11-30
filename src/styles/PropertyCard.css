@@ -16,10 +16,14 @@
   width: 100%;
   margin-bottom: 5px;
   padding: 5px 0 5px 0;
+  cursor: pointer;
 }
 
 button > a {
   color: white;
+  display: block;
+  padding: 2em;
+  margin: -2em;
 }
 
 button > a:hover {

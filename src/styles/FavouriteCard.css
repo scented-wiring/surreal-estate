@@ -1,6 +1,5 @@
 .favourite-card {
   background-color: #fff6e7;
-  font-size: 16px;
   display: flex;
   justify-content: space-between;
   width: 500px;
@@ -11,8 +10,8 @@
 
 .favourite-remove {
   color: white;
-  font-size: 16px;
   margin-left: 5px;
+  padding: 0 15px 0 15px;
 }
 
 .favourite-remove:hover {

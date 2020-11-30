@@ -2,7 +2,6 @@
   display: flex;
   flex: 1;
   border-bottom: black 1px solid;
-  height: 60px;
   background-color: #ffad48;
   align-items: center;
 }
@@ -22,11 +21,10 @@
 }
 
 .navbar-login-button {
-  border: none;
   color: white;
+  padding: 0 15px 0 15px;
   font-size: 1.1em;
   height: 60px;
-  padding: 0 25px 0 25px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 

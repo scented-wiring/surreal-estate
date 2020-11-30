@@ -1,7 +1,8 @@
 .properties {
   display: flex;
-  flex: 1;
+  flex: 13;
   align-items: flex-start;
+  min-height: min-content;
 }
 
 .property-cards {
@@ -17,11 +18,6 @@
   background-color: #fff6e7;
   border: black 1px solid;
   padding: 10px;
-}
-
-.property-alert {
-  width: 100%;
-  margin-left: 10px;
 }
 
 @media only screen and (max-width: 790px) {
