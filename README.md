@@ -1,4 +1,41 @@
+# Surreal Estate App
+
+This app interacts with a database via API requests to allow the user to view/add property listings and save favourites.
+
+# Screenshots
+
+### Desktop
+
+![App desktop screenshot](url)
+
+### Mobile
+
+![App mobile screenshot](url)
+
+## Built with
+
+- React
+- Node.js
+
+## Testing utilities
+
+- Jest
+- React Testing Library
+- Enzyme
+
+## Packages used
+
+- Axios
+- font-awesome icons
+- PropTypes
+- qs
+- react-facebook-login
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Instructions
+
+You will be required to create a database in order for the app to make API requests. Clone down the [surreal-estate-api](https://github.com/MCRcodes/surreal-estate-api) repository and follow the instructions in the README to run in a container.
 
 ## Available Scripts
 
