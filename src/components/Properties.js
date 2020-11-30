@@ -42,7 +42,7 @@ const Properties = ({ userID }) => {
     });
   };
 
-  if (load === true) {
+  if (load) {
     return (
       <div className="properties">
         <Sidebar />

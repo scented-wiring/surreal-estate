@@ -9,8 +9,10 @@ import { useEffect } from "react";
 const Favourites = ({ userID }) => {
   const [favourites, setFavourites] = useState([]);
   const [alert, setAlert] = useState({ message: "", isSuccess: false });
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
+    setLoad(true);
     let isMounted = true;
     axios
       .get("http://localhost:4000/api/v1/Favourite")
@@ -23,6 +25,7 @@ const Favourites = ({ userID }) => {
           isSuccess: false,
         });
       });
+    setLoad(false);
     return () => {
       isMounted = false;
     };
@@ -48,6 +51,14 @@ const Favourites = ({ userID }) => {
         });
       });
   };
+
+  if (load) {
+    return (
+      <div className="favourites">
+        <div className="alert-success">Loading...</div>
+      </div>
+    );
+  }
 
   if (alert.message === "Could not connect to server.") {
     return (
